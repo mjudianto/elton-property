@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Elton Property</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/elton_property.styles.css" asp-append-version="true" />
+
+    <link rel="icon"
+          href="~/images/elton-favicon.svg"
+          type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet" />
+
+    <link href="~/css/font-awesome-all.css" rel="stylesheet" />
+    <link href="~/css/flaticon.css" rel="stylesheet" />
+    <link href="~/css/owl.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/animate.css" rel="stylesheet" />
+    <link href="~/css/jquery-ui.css" rel="stylesheet" />
+    <link href="~/css/nice-select.css" rel="stylesheet" />
+    <link href="~/css/color/theme-color.css"
+          id="jssDefault"
+          rel="stylesheet" />
+
+    <link href="~/css/switcher-style.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/responsive.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="boxed_wrapper">
+
+        @if (ViewData["Title"]!.ToString() == "Home")
+        {
+            <!-- main header -->
+            <header class="main-header elton-header-style">
+                <!-- header-lower -->
+                <div class="header-lower">
+                    <div class="outer-box">
+                        <div class="main-box">
+                            <div class="logo-box">
+                                <figure class="logo">
+                                    <a href="index.html">
+                                        <img src="~/images/elton-property-logo-white.svg"
+                                             alt="" />
+                                    </a>
+                                </figure>
+                            </div>
+                            <div class="menu-area clearfix">
+                                <!--Mobile Navigation Toggler-->
+                                <div class="mobile-nav-toggler">
+                                    <i class="icon-bar"></i>
+                                    <i class="icon-bar"></i>
+                                    <i class="icon-bar"></i>
+                                </div>
+                                <nav class="main-menu navbar-expand-md navbar-light">
+                                    <div class="collapse navbar-collapse show clearfix"
+                                         id="navbarSupportedContent">
+                                        <ul class="navigation clearfix">
+                                            <li class="current"><a href="index.html">Home</a></li>
+                                            @* <li><a href="about.html">About</a></li> *@
+                                            <li class="dropdown">
+                                                <a asp-action="Privacy"><span>Projects</span></a>
+                                                <ul>
+                                                    <li><a href="project-detail.html">Project 1</a></li>
+                                                    <li><a href="project-detail.html">Project 2</a></li>
+                                                    <li><a href="project-detail.html">Project 3</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a asp-controller="Property" asp-action="PropertyList">Buy</a></li>
+                                            <li><a asp-controller="Property" asp-action="PropertyList">Sell</a></li>
+                                            <li><a asp-controller="Property" asp-action="PropertyList">Rent</a></li>
+                                            <li>
+                                                <a href="contact.html"><span>Contact</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--sticky Header-->
+                <div class="sticky-header">
+                    <div class="outer-box">
+                        <div class="main-box">
+                            <div class="logo-box">
+                                <figure class="logo">
+                                    <a href="index.html">
+                                        <img src="~/images/elton-property-logo.svg" alt="" />
+                                    </a>
+                                </figure>
+                            </div>
+                            <div class="menu-area clearfix">
+                                <nav class="main-menu clearfix">
+                                    <!--Keep This Empty / Menu will come through Javascript-->
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- main-header end -->
+        }
+        else
+        {
+            <header class="main-header">
+                <div class="header-lower">
+                    <div class="outer-box">
+                        <div class="main-box">
+                            <div class="logo-box">
+                                <figure class="logo">
+                                    <a href="index.html">
+                                        <img src="~/images/elton-property-logo.svg" alt="" />
+                                    </a>
+                                </figure>
+                            </div>
+                            <div class="menu-area clearfix">
+                                <!--Mobile Navigation Toggler-->
+                                <div class="mobile-nav-toggler">
+                                    <i class="icon-bar"></i>
+                                    <i class="icon-bar"></i>
+                                    <i class="icon-bar"></i>
+                                </div>
+                                <nav class="main-menu navbar-expand-md navbar-light">
+                                    <div class="collapse navbar-collapse show clearfix"
+                                         id="navbarSupportedContent">
+                                        <ul class="navigation clearfix">
+                                            <li class="current"><a href="index.html">Home</a></li>
+                                            <li><a href="about.html">About</a></li>
+                                            <li class="dropdown">
+                                                <a href="project.html"><span>Projects</span></a>
+                                                <ul>
+                                                    <li><a href="project-detail.html">Project 1</a></li>
+                                                    <li><a href="project-detail.html">Project 2</a></li>
+                                                    <li><a href="project-detail.html">Project 3</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="buy.html">Buy</a></li>
+                                            <li><a href="sell.html">Sell</a></li>
+                                            <li><a href="rent.html">Rent</a></li>
+                                            <li>
+                                                <a href="contact.html"><span>Contact</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--sticky Header-->
+                <div class="sticky-header">
+                    <div class="outer-box">
+                        <div class="main-box">
+                            <div class="logo-box">
+                                <figure class="logo">
+                                    <a href="index.html">
+                                        <img src="~/images/elton-property-logo.svg" alt="" />
+                                    </a>
+                                </figure>
+                            </div>
+                            <div class="menu-area clearfix">
+                                <nav class="main-menu clearfix">
+                                    <!--Keep This Empty / Menu will come through Javascript-->
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        }
+
+    
+    
+    @RenderBody()
+
+        
+
+    <footer class="main-footer">
+        <div class="footer-top bg-color-2">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="footer-widget about-widget">
+                            <div class="widget-title">
+                                <h3>About</h3>
+                            </div>
+                            <div class="text">
+                                <p>
+                                    Lorem ipsum dolor amet consetetur adi pisicing elit sed
+                                    eiusm tempor in cididunt ut labore dolore magna aliqua
+                                    enim ad minim venitam
+                                </p>
+                                <p>
+                                    Quis nostrud exercita laboris nisi ut aliquip commodo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="footer-widget links-widget ml-70">
+                            <div class="widget-title">
+                                <h3>Services</h3>
+                            </div>
+                            <div class="widget-content">
+                                <ul class="links-list class">
+                                    <li><a href="index.html">About Us</a></li>
+                                    <li><a href="index.html">Listing</a></li>
+                                    <li><a href="index.html">How It Works</a></li>
+                                    <li><a href="index.html">Our Services</a></li>
+                                    <li><a href="index.html">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="footer-widget contact-widget">
+                            <div class="widget-title">
+                                <h3>Contacts</h3>
+                            </div>
+                            <div class="widget-content">
+                                <ul class="info-list clearfix">
+                                    <li>
+                                        <i class="fas fa-map-marker-alt"></i>Jl. Barito II
+                                        No.56, RW.4, Kramat Pela, Kec. Kby. Baru, Kota Jakarta
+                                        Selatan
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-microphone"></i><a href="#">+62 812345678</a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope"></i><a href="#">elton@mail.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="auto-container">
+                <div class="inner-box clearfix">
+                    <figure class="footer-logo">
+                        <a href="index.html">
+                            <img src="~/images/elton-favicon.svg"
+                                 alt=""
+                                 width="118"
+                                 height="93" />
+                        </a>
+                    </figure>
+                    <div class="copyright pull-left">
+                        <p>
+                            <a href="index.html">Elton Property</a> &copy; 2024 All Right
+                            Reserved
+                        </p>
+                    </div>
+                    <ul class="footer-nav pull-right clearfix">
+                        <li><a href="index.html">Terms of Service</a></li>
+                        <li><a href="index.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+        <!--Scroll to top-->
+        <button class="scroll-top scroll-to-target" data-target="html">
+            <span class="fal fa-angle-up"></span>
+        </button>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/js/jquery.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/owl.js"></script>
+    <script src="~/js/wow.js"></script>
+    <script src="~/js/scrollbar.js"></script>
+    <script src="~/js/isotope.js"></script>
+    <script src="~/js/jquery.nice-select.min.js"></script>
+    <script src="~/js/jquery-ui.js"></script>
+    <script src="~/js/jquery.paroller.min.js"></script>
+    <script src="~/js/nav-tool.js"></script>
+
+    <script src="~/js/script.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
